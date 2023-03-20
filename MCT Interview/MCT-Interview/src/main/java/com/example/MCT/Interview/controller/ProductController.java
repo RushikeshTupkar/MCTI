@@ -24,4 +24,9 @@ public class ProductController {
     public String deleteProduct(@RequestParam Integer id) throws FoundNothing {
         return productService.deleteProduct(id);
     }
+    
+    @GetMapping("/getProduct")
+    public Product getProduct(@RequestParam(value = "id") Integer id){
+        return productService.getMeProduct(id);
+    }
 }
